@@ -83,7 +83,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>DrCare Medical Center</h1>
-                    <a href="{{ url('/index') }}">Home</a> <span>|</span> <a {{ url('/about') }}>About Us</a>
+                    <a href="{{ url('/index') }}">Home</a> <span>|</span> <a href="{{ url('/about') }}">About Us</a>
                     
                 </div>
             </div>

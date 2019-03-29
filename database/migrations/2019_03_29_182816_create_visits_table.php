@@ -18,9 +18,9 @@ class CreateVisitsTable extends Migration
             $table->unsignedInteger('patient_id');
             $table->unsignedInteger('doctor_id');
             $table->unsignedInteger('secretary_id')->nullable();
-            $table->foreign('patient_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('secretary_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('patient_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('doctor_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('secretary_id')->references('id')->on('customers')->onDelete('cascade');
             $table->timestamp('visit_time');
             $table->text('patient_explanation');
             $table->text('doctor_notes');

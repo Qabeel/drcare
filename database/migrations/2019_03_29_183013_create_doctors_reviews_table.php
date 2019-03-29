@@ -17,8 +17,8 @@ class CreateDoctorsReviewsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('patient_id');
             $table->unsignedInteger('doctor_id');
-            $table->foreign('patient_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('patient_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->foreign('doctor_id')->references('id')->on('customers')->onDelete('cascade');
             $table->integer('rate');
             $table->text('review');
             $table->timestamps();

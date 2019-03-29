@@ -20,11 +20,20 @@
     <link rel="stylesheet" href="{{asset('/css/jquery.datetimepicker.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/linearicons.css')}}">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
-    
+    <?php
+        if(!Auth::guest()){
+            $userID = \Auth::user()->id;
+            $userR = \Auth::user()->role;
+        }else{
+            $userID = "Not Logged";
+            $userR  = " ";
+        }
+
+    ?>
 </head>
 <body>
     <!-- Preloader Starts -->
-    <div class="preloader">
+    <div> <!--  class="preloader" -->
 
     <!-- Header Area Starts -->
     <header class="header-area">
@@ -61,12 +70,24 @@
                         <li><a href="{{ url('/department') }}">     Departments</a></li>
                         <li><a href="{{ url('/doctors') }}">        Doctors</a></li>
                         <li><a href="{{ url('/contact') }}">        Contact</a></li> 
-                        <li class="menu-has-children"><a href="">   Join US</a>
+                        
+                        @guest
+                        <li class="menu-has-children"><a href="#">   Join US</a>
                             <ul>
-                                <li><a href="{{ url('/login') }}">  Login</a> </li>
-                                <li><a href="{{ url('/signup') }}"> Sign up</a></li>
+                                <li><a href="{{ route('login') }}">  Login</a> </li>
+                                <li><a href="{{ route('register') }}"> Sign up</a></li>
                             </ul>
                         </li>
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                            </form>
+
+                        </li>
+                        @endguest
                     
                     </ul>
                 </nav>
@@ -172,15 +193,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- Javascript -->
     
-    <!--
+    
         <script src="{{asset('/js/vendor/jquery-2.2.4.min.js')}}"></script>
-        <script src="{{asset('/js/vendor/bootstrap-4.1.3.min.js')}}"></script>
+        <!-- <script src="{{asset('/js/vendor/bootstrap-4.1.3.min.js')}}"></script>
         <script src="{{asset('/js/vendor/wow.min.js')}}"></script>
         <script src="{{asset('/js/vendor/owl-carousel.min.js')}}"></script>
         <script src="{{asset('/js/vendor/jquery.datetimepicker.full.min.js')}}"></script>
         <script src="{{asset('/js/vendor/jquery.nice-select.min.js')}}"></script>
         <script src="{{asset('/js/vendor/superfish.min.js')}}"></script>
-        <script src="{{asset('/js/main.js')}}"></script>
-    -->
+        <script src="{{asset('/js/main.js')}}"></script> -->
+    
     </body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu-has-children').on('click',function(e){
+                $(this).find('ul').css('display','block');
+            });
+        });
+    </script>
 </html>
+

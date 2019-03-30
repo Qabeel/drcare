@@ -158,7 +158,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1 align-self-center">
                     <div class="appointment-form text-center mt-5 mt-lg-0">
-                        <h3 class="mb-5">appointment now</h3>
+                        <h3 class="mb-5">Appointment now</h3>
                         <form action="#">
                             <div class="form-group">
                                 <input type="text" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" required>
@@ -172,7 +172,7 @@
                             <div class="form-group">
                                 <textarea name="message" cols="20" rows="7"  placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" required></textarea>
                             </div>
-                            <a href="#" class="template-btn">appointment now</a>
+                            <a href="" class="template-btn">Appointment now</a>
                         </form>
                     </div>
                 </div>

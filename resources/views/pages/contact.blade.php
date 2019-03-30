@@ -7,14 +7,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div id="mapBox" class="mapBox" 
+                            <iframe id="mapBox" class="mapBox" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13822.703169096321!2d31.108024300000004!3d29.98874605!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1553954130766!5m2!1sen!2seg"
+                            width="1140"
+                            height="456"
+                            frameborder="0"
+                            style="border:0"
+                            allowfullscreen></iframe>
+                        <!--<div id="mapBox" class="mapBox" 
                             data-lat="40.701083" 
                             data-lon="-74.1522848" 
                             data-zoom="13" 
                             data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
                             data-mlat="40.701083"
                             data-mlon="-74.1522848">
-                        </div>
+                        </div>-->
+                    </div>
                     </div>
                 </div>
             </div>

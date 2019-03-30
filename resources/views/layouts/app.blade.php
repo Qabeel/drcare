@@ -14,12 +14,12 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{asset('/css/font-awesome-4.7.0.min.css')}}">
-    
     <link rel="stylesheet" href="{{asset('/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('/css/owl-carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/jquery.datetimepicker.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/linearicons.css')}}">
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
+
     <?php
         if(!Auth::guest()){
             $userID = \Auth::user()->id;
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div id="header" id="home">
+        <div id="header" class="header-scrolled">
             <div class="container">
                 <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
@@ -67,6 +67,7 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
+                            <li><a href="{{ url('/') }}">           Home</a></li>
                         <li><a href="{{ url('/department') }}">     Departments</a></li>
                         <li><a href="{{ url('/doctors') }}">        Doctors</a></li>
                         <li><a href="{{ url('/contact') }}">        Contact</a></li> 
@@ -193,15 +194,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- Javascript -->
     
-    
         <script src="{{asset('/js/vendor/jquery-2.2.4.min.js')}}"></script>
-        <!-- <script src="{{asset('/js/vendor/bootstrap-4.1.3.min.js')}}"></script>
+        <script src="{{asset('/js/vendor/bootstrap-4.1.3.min.js')}}"></script>
         <script src="{{asset('/js/vendor/wow.min.js')}}"></script>
         <script src="{{asset('/js/vendor/owl-carousel.min.js')}}"></script>
         <script src="{{asset('/js/vendor/jquery.datetimepicker.full.min.js')}}"></script>
         <script src="{{asset('/js/vendor/jquery.nice-select.min.js')}}"></script>
         <script src="{{asset('/js/vendor/superfish.min.js')}}"></script>
-        <script src="{{asset('/js/main.js')}}"></script> -->
+        <script src="{{asset('/js/main.js')}}"></script>
     
     </body>
     <script type="text/javascript">

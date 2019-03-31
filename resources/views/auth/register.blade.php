@@ -8,6 +8,7 @@
             <div class="card">
                 <!-- <div class="card-header">{{ __('Register') }}</div> -->
 
+                    <!-- new fields of register -->
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @csrf

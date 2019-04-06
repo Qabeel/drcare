@@ -35,4 +35,8 @@ class PagesController extends Controller
         return view ('pages.doctors');
 
     }
+
+    public function profile(){
+        return view('pages.Profile');
+    }
 }

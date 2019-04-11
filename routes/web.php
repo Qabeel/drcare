@@ -20,6 +20,11 @@ Route::get('/Profile', 'PagesController@profile');
 
 Auth::routes();
 
+Route::get('specializations' , 'SpecializationController@index');
+Route::get('specializations/{id}' , 'SpecializationController@show');
+
+Route::resource('/appointment' , 'PatientController');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

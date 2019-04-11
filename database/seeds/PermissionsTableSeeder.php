@@ -203,6 +203,126 @@ class PermissionsTableSeeder extends Seeder
                 'key' => 'delete_customers',
                 'table_name' => 'customers',
             ),
+            
+            array (
+                'id' => 32,
+                'key' => 'browse_specializations',
+                'table_name' => 'specializations',
+            ),
+            
+            array (
+                'id' => 33,
+                'key' => 'read_specializations',
+                'table_name' => 'specializations',
+            ),
+            
+            array (
+                'id' => 34,
+                'key' => 'edit_specializations',
+                'table_name' => 'specializations',
+            ),
+            
+            array (
+                'id' => 35,
+                'key' => 'add_specializations',
+                'table_name' => 'specializations',
+            ),
+            
+            array (
+                'id' => 36,
+                'key' => 'delete_specializations',
+                'table_name' => 'specializations',
+            ),
+            
+            array (
+                'id' => 37,
+                'key' => 'browse_doctors',
+                'table_name' => 'doctors',
+            ),
+            
+            array (
+                'id' => 38,
+                'key' => 'read_doctors',
+                'table_name' => 'doctors',
+            ),
+            
+            array (
+                'id' => 39,
+                'key' => 'edit_doctors',
+                'table_name' => 'doctors',
+            ),
+            
+            array (
+                'id' => 40,
+                'key' => 'add_doctors',
+                'table_name' => 'doctors',
+            ),
+            
+            array (
+                'id' => 41,
+                'key' => 'delete_doctors',
+                'table_name' => 'doctors',
+            ),
+            
+            array (
+                'id' => 42,
+                'key' => 'browse_appointments',
+                'table_name' => 'appointments',
+            ),
+            
+            array (
+                'id' => 43,
+                'key' => 'read_appointments',
+                'table_name' => 'appointments',
+            ),
+            
+            array (
+                'id' => 44,
+                'key' => 'edit_appointments',
+                'table_name' => 'appointments',
+            ),
+            
+            array (
+                'id' => 45,
+                'key' => 'add_appointments',
+                'table_name' => 'appointments',
+            ),
+            
+            array (
+                'id' => 46,
+                'key' => 'delete_appointments',
+                'table_name' => 'appointments',
+            ),
+            
+            array (
+                'id' => 47,
+                'key' => 'browse_patients',
+                'table_name' => 'patients',
+            ),
+            
+            array (
+                'id' => 48,
+                'key' => 'read_patients',
+                'table_name' => 'patients',
+            ),
+            
+            array (
+                'id' => 49,
+                'key' => 'edit_patients',
+                'table_name' => 'patients',
+            ),
+            
+            array (
+                'id' => 50,
+                'key' => 'add_patients',
+                'table_name' => 'patients',
+            ),
+            
+            array (
+                'id' => 51,
+                'key' => 'delete_patients',
+                'table_name' => 'patients',
+            ),
         ));
         
         

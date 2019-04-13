@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MenusTableSeeder::class);
         $this->call(MenuItemsTableSeeder::class);
         $this->call(DataRowsTableSeeder::class);
+        $this->call(VoyagerDatabaseSeeder::class);
 
     }
 }

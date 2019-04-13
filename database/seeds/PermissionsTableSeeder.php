@@ -323,6 +323,36 @@ class PermissionsTableSeeder extends Seeder
                 'key' => 'delete_patients',
                 'table_name' => 'patients',
             ),
+            
+            array (
+                'id' => 52,
+                'key' => 'browse_doctor_times',
+                'table_name' => 'doctor_times',
+            ),
+            
+            array (
+                'id' => 53,
+                'key' => 'read_doctor_times',
+                'table_name' => 'doctor_times',
+            ),
+            
+            array (
+                'id' => 54,
+                'key' => 'edit_doctor_times',
+                'table_name' => 'doctor_times',
+            ),
+            
+            array (
+                'id' => 55,
+                'key' => 'add_doctor_times',
+                'table_name' => 'doctor_times',
+            ),
+            
+            array (
+                'id' => 56,
+                'key' => 'delete_doctor_times',
+                'table_name' => 'doctor_times',
+            ),
         ));
         
         

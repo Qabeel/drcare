@@ -145,6 +145,22 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
             ),
+            
+            array (
+                'id' => 9,
+                'name' => 'doctor_times',
+                'slug' => 'doctor-times',
+                'display_name_singular' => 'Doctor Time',
+                'display_name_plural' => 'Doctor Times',
+                'icon' => 'voyager-watch',
+                'model_name' => 'App\\DoctorTime',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+            ),
         ));
         
         

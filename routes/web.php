@@ -22,6 +22,8 @@ Auth::routes();
 
 Route::get('specializations' , 'SpecializationController@index');
 Route::get('specializations/{id}' , 'SpecializationController@show');
+Route::get('doctors' , 'DoctorController@index');
+Route::get('doctors/{id}' , 'DoctorController@show');
 
 Route::resource('/appointment' , 'PatientController');
 

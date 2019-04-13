@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class PatientController extends Controller
 {
@@ -13,14 +15,28 @@ class PatientController extends Controller
         $this->middleware('auth');
     }
 
-    public function create()
+    public function store(Request $request)
     {
-        return view();
-    }
+        $validator = Validator::make($request->all(), [
+            'date' => 'required',
+            'gender' => 'required',
+            'email' => 'required|email',
+            'phone_number' => 'required|number',
+            'first_name' => 'required|alpha',
+            'last_name' => 'required|alpha',
+        ]);
 
-    public function save(Request $request)
-    {
+        if ($validator->fails()) {
+            return redirect('registration')
+                ->withErrors($validator)
+                ->withInput();
+        }
+        $patient_id = Auth::user()->id;
+
+        $patient_id = $request['patient_id'];
         $appointment = Appointment::create($request->all());
+
+        $appointment->save();
 
         if ($appointment)
         {

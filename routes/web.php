@@ -17,7 +17,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/doctors', 'PagesController@doctors');
 Route::get('/department', 'PagesController@department');
 Route::get('/Profile', 'PagesController@profile');
-Route::get('/registration', 'PagesController@registration');
+Route::get('/registration', 'PagesController@registration')->middleware('auth');
 
 Auth::routes();
 

@@ -27,7 +27,8 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Book Your Appointment</h2>
-                    <form method="POST">
+                    <form method="POST" action="appointment">
+                        {{csrf_field()}}
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">

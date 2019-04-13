@@ -639,10 +639,12 @@ pre code {
 }
 
 .col-2 {
-  -ms-flex: 0 0 16.666667%;
-  flex: 0 0 16.666667%;
+  /*-ms-flex: 0 0 16.666667%;*/
+ /* flex: 0 0 16.666667%;
   max-width: 16.666667%;
+  */
 }
+
 
 .col-3 {
   -ms-flex: 0 0 25%;
@@ -3406,7 +3408,7 @@ input[type="button"].btn-block {
 .input-group {
   position: relative;
   display: -ms-flexbox;
-  display: flex;
+  /*display: flex;*/
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-align: stretch;

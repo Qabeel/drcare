@@ -33,7 +33,8 @@ class PatientController extends Controller
         }
         $patient_id = Auth::user()->id;
 
-        $patient_id = $request['patient_id'];
+        $request['patient_id'] = $patient_id;
+
         $appointment = Appointment::create($request->all());
 
         $appointment->save();

@@ -16,6 +16,7 @@ class DoctorController extends Controller
 
     public function show($id)
     {
+
         $doctor = Doctor::find($id);
 
         $doctorTime = $doctor->DoctorTime;

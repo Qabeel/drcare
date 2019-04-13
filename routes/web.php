@@ -25,8 +25,10 @@ Route::get('specializations' , 'SpecializationController@index');
 Route::get('specializations/{id}' , 'SpecializationController@show');
 Route::get('doctors' , 'DoctorController@index');
 Route::get('doctors/{id}' , 'DoctorController@show');
+Route::get('doctortimes' , 'DoctorTimeController@index');
+Route::get('doctortimes/{id}' , 'DoctorTimeController@show');
 
-Route::resource('/appointment' , 'PatientController');
+Route::resource('/appointments' , 'AppointmentController');
 
 
 Route::group(['prefix' => 'admin'], function () {

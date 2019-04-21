@@ -37,11 +37,11 @@ class PagesController extends Controller
     }
 
     public function profile(){
-        return view('pages.Profile');
+        return view('pages.profile');
     }
 
-    public function registration(){
-        return view('pages.registration');
+    public function appointment(){
+        return view('pages.appointments.appointment');
     }
 
     

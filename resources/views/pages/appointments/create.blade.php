@@ -27,8 +27,9 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Book Your Appointment</h2>
-                    <form method="POST" action="appointment">
+                    <form method="POST" action="/appointment/create">
                         {{csrf_field()}}
+                        <!--
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
@@ -82,15 +83,16 @@
                                     <input class="input--style-4" type="text" name="phone">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="input-group">
                             <label class="label">Specilization</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="subject">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Ocuolist</option>
-                                    <option>Cardiology</option>
-                                    <option>Neurosurgery</option>
+                                <select name="appointment_id">
+                                    <option disabled="disabled" selected="selected">Choose Specilization</option>
+                                    @foreach ($specializations as $specilization)
+                                        <option value="{{specialization_id}}">{{specialization_name}}</option>    
+                                    @endforeach
+                                    
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>
@@ -120,7 +122,7 @@
                             </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Reserve</button>
+                            <button class="btn btn--radius-2 btn--blue" type="submit">Book</button>
                         </div>
                     </form>
                 </div>

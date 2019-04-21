@@ -22,4 +22,5 @@ class SpecializationController extends Controller
 
         return $specialization;
     }
+
 }

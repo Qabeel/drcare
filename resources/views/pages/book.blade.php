@@ -100,9 +100,15 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="subject">
                                     <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Doctor X</option>
-                                    <option>Doctor Y</option>
-                                    <option>Doctor Z</option>
+
+                                        <option>{{$name}}</option>
+
+{{--                                else{--}}
+{{--                                    @foreach($doctors as $doctor)--}}
+{{--                                        <option>$doctor</option>--}}
+{{--                                    @endforeach--}}
+{{--                                        }--}}
+
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>

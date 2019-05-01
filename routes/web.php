@@ -16,7 +16,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 Route::get('/doctors', 'PagesController@doctors');
 Route::get('/department', 'PagesController@department');
-Route::get('/Profile', 'PagesController@profile');
+Route::get('/Profile', 'AppointmentController@index');
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/book', 'PagesController@book')->middleware('auth');
 });

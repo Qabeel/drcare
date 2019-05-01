@@ -51,21 +51,14 @@ class AppointmentController extends Controller
         }
     }
 
+
     public function index()
     {
-        $appointments = Appointment::all();
-
-        return $appointments;
-    }
-
-    public function show($id)
-    {
-        $appointment = Appointment::find($id);
-
-        $patient = $appointment->Patient;
-        $doctor = $appointment->Doctor;
-        $specialization = $doctor->Specialization;
-
-        return $appointment;
+        $appointments = Appointment::with('Doctor')->get();
+        if (! $appointments->isEmpty()) {
+        return  view('pages.Profile' , ["appointments" => $appointments]);
+        } else {
+           return response()->json("There is no appointment");
+        }
     }
 }

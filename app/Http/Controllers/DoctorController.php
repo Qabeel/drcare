@@ -11,7 +11,7 @@ class DoctorController extends Controller
     {
         $doctors = Doctor::all();
 
-        return $doctors ;
+        return $doctors;
     }
 
     public function show($id)

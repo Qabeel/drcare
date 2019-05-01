@@ -40,8 +40,8 @@ class PagesController extends Controller
         return view('pages.Profile');
     }
 
-    public function registration(){
-        return view('pages.registration');
+    public function book(){
+        return view('pages.book');
     }
 
     

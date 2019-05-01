@@ -72,7 +72,7 @@
                             <li><a href="{{ url('/') }}"> Home</a></li>
                             <li><a href="{{ url('/department') }}"> Departments</a></li>
                             <li><a href="{{ url('/doctors') }}"> Doctors</a></li>
-                            <li><a href="{{ url('/registration') }}"> Book</a></li>
+                            <li><a href="{{ url('/book') }}"> Book</a></li>
                             <li><a href="{{ url('/contact') }}"> Contact</a></li>
                             @guest
                                 <li class="menu-has-children"><a href="#"> Join US</a>
